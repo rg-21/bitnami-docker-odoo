@@ -26,7 +26,6 @@ RUN /opt/bitnami/scripts/odoo/postunpack.sh
 ENV BITNAMI_APP_NAME="odoo" \
     BITNAMI_IMAGE_VERSION="14.0.20210710-debian-10-r23" \
     PATH="/opt/bitnami/python/bin:/opt/bitnami/common/bin:/opt/bitnami/postgresql/bin:/opt/bitnami/node/bin:/opt/bitnami/odoo/bin:$PATH" \
-    
     POSTGRESQL_HOST="35.231.253.154" \
     POSTGRESQL_PORT_NUMBER="5432" \
     POSTGRESQL_ROOT_USER="postgres"    
@@ -34,14 +33,7 @@ ENV BITNAMI_APP_NAME="odoo" \
     POSTGRESQL_CLIENT_CREATE_DATABASE_NAME="odoo_5" \
     POSTGRESQL_CLIENT_CREATE_DATABASE_USERNAME="odoo" \    
     POSTGRESQL_CLIENT_CREATE_DATABASE_PASSWORD="odoo" \
- 
-    #or
     
-    
-    
-    
-
-
 EXPOSE 3000 8069 8072
 
 USER root
