@@ -17,14 +17,17 @@ services:
     depends_on:
       - postgresql
     environment:
+      - ODOO_EMAIL=devops1@rg1.us
+      - ODOO_PASSWORD=Devops123!!
+      - ODOO_LOAD_DEMO_DATA=no
+      - ODOO_SKIP_BOOTSTRAP=yes      
       - ODOO_DATABASE_HOST=35.231.253.154
       - ODOO_DATABASE_PORT_NUMBER=5432
       - ODOO_DATABASE_NAME=bitnami_odoo
+      - ODOO_DATABASE_USER=bn_odoo 
       - ODOO_DATABASE_PASSWORD=0676e3492c403b6653f8cd4a0a61facb085bbf5002a698a6ad1010917244ad00
       #- ALLOW_EMPTY_PASSWORD=
-      - ODOO_DATABASE_USER=bn_odoo      
-      - ODOO_SKIP_BOOTSTRAP=yes      
-      
+          
      volumes:
   #postgresql_data:
     #driver: local
