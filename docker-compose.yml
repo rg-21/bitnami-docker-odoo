@@ -27,9 +27,9 @@ services:
       - ODOO_DATABASE_USER=bn_odoo 
       - ODOO_DATABASE_PASSWORD=0676e3492c403b6653f8cd4a0a61facb085bbf5002a698a6ad1010917244ad00
       #- ALLOW_EMPTY_PASSWORD=
-          
-     volumes:
-  #postgresql_data:
+ 
+volumes:
+ #postgresql_data:
     #driver: local
   odoo_data:
     driver: local
