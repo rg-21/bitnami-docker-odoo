@@ -1,13 +1,13 @@
 version: '2'
 services:
-  postgresql:
-    image: docker.io/bitnami/postgresql:13
-    volumes:
-      - 'postgresql_data:/bitnami/postgresql'
-    environment:
-      - ALLOW_EMPTY_PASSWORD=yes
-      - POSTGRESQL_USERNAME=bn_odoo
-      - POSTGRESQL_DATABASE=bitnami_odoo
+  #postgresql:
+    #image: docker.io/bitnami/postgresql:13
+    #volumes:
+      #- 'postgresql_data:/bitnami/postgresql'
+    #environment:
+      #- ALLOW_EMPTY_PASSWORD=yes
+      #- POSTGRESQL_USERNAME=bn_odoo
+      #- POSTGRESQL_DATABASE=bitnami_odoo
   odoo:
     image: docker.io/bitnami/odoo:14
     ports:
@@ -17,13 +17,19 @@ services:
     depends_on:
       - postgresql
     environment:
-      - ALLOW_EMPTY_PASSWORD=yes
-      - ODOO_DATABASE_HOST=postgresql
+      - ODOO_EMAIL=devops1@rg1.us
+      - ODOO_PASSWORD=Devops123!!
+      - ODOO_LOAD_DEMO_DATA=no
+      - ODOO_SKIP_BOOTSTRAP=yes      
+      - ODOO_DATABASE_HOST=35.231.253.154
       - ODOO_DATABASE_PORT_NUMBER=5432
-      - ODOO_DATABASE_USER=bn_odoo
       - ODOO_DATABASE_NAME=bitnami_odoo
-volumes:
-  postgresql_data:
-    driver: local
+      - ODOO_DATABASE_USER=bn_odoo 
+      - ODOO_DATABASE_PASSWORD=0676e3492c403b6653f8cd4a0a61facb085bbf5002a698a6ad1010917244ad00
+      #- ALLOW_EMPTY_PASSWORD=
+          
+     volumes:
+  #postgresql_data:
+    #driver: local
   odoo_data:
     driver: local
