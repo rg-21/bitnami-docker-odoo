@@ -1,4 +1,10 @@
- {
+ 
+  {
   "schemaVersion": 2,
-  "dockerfilePath": "./DockerFile"
- }
+  "imageName": "bitnami/odoo:latest"
+ } 
+ 
+# {
+  #"schemaVersion": 2,
+  #"dockerfilePath": "./DockerFile"
+# }
