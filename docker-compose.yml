@@ -14,8 +14,8 @@ services:
       - '80:8069'
     volumes:
       - 'odoo_data:/bitnami/odoo'
-    depends_on:
-      - postgresql
+    #depends_on:
+     # - postgresql
     environment:
       - ODOO_EMAIL=devops1@rg1.us
       - ODOO_PASSWORD=Devops123!!
